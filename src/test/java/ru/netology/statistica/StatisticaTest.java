@@ -44,15 +44,15 @@ class StatisticaTest {
     public void calculateMinSumSellsIndex() {
         Statistica service = new Statistica();
         long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 4;
+        long expected = 5;
         long actual = service.calculateMinSumSellsIndex(purchases);
-        assertEquals(expected, actual); c
+        assertEquals(expected, actual);
     }
     @Test
     public void calculateMaxSumSellsIndex() {
         Statistica service = new Statistica();
         long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 6;
+        long expected = 5;
         long actual = service.calculateMaxSumSellsIndex(purchases);
         assertEquals(expected, actual);
     }
