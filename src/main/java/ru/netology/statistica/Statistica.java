@@ -23,7 +23,7 @@ public class Statistica {
         int indexOfMin = 0;
         long min = purchases[0];
         for (int i = 0; i < purchases.length; i++) {
-            if (purchases[i] < purchases[0]) {
+            if (purchases[i] <= min) {
                 min = purchases[i];
                 indexOfMin = i + 1;
             }
@@ -34,8 +34,8 @@ public class Statistica {
     public int calculateIndexOfMaxSells(long[] purchases) {
         int indexOfMax = 0;
         long max = purchases[0];
-        for (int i = 0; i < purchases.length - 1; i++) {
-            if (purchases[i] > purchases[i + 1]) {
+        for (int i = 0; i < purchases.length; i++) {
+            if (purchases[i] >= max) {
                 max = purchases[i];
                 indexOfMax = i + 1;
             }
