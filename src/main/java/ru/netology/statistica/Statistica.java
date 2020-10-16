@@ -8,6 +8,7 @@ public class Statistica {
         }
         return sum;
     }
+
     public long calculateAverageSells(long[] purchases) {
         long sum = 0;
         long avSells = 0;
@@ -17,6 +18,7 @@ public class Statistica {
         }
         return avSells;
     }
+
     public int calculateIndexOfMinSells(long[] purchases) {
         int indexOfMin = 0;
         long min = purchases[0];
@@ -28,7 +30,8 @@ public class Statistica {
         }
         return indexOfMin;
     }
-    public int calculateIndexOfMaxSells (long[] purchases){
+
+    public int calculateIndexOfMaxSells(long[] purchases) {
         int indexOfMax = 0;
         long max = purchases[0];
         for (int i = 0; i < purchases.length - 1; i++) {
@@ -39,27 +42,29 @@ public class Statistica {
         }
         return indexOfMax;
     }
-    public int calculateMinSumSellsIndex (long[] purchases){
+
+    public int calculateMinSumSellsIndex(long[] purchases) {
         int minSumSellIndex = 0;
         int sum = 0;
         for (long purchase : purchases) {
             sum += purchase;
         }
-            int avSells = (sum/ purchases.length);
-            for (int i = 0; i < purchases.length; i++) {
-                if (avSells > purchases[i]) {
-                    minSumSellIndex++;
-                }
+        int avSells = (sum / purchases.length);
+        for (int i = 0; i < purchases.length; i++) {
+            if (avSells > purchases[i]) {
+                minSumSellIndex++;
             }
-        return minSumSellIndex;
         }
-    public int calculateMaxSumSellsIndex (long[] purchases){
+        return minSumSellIndex;
+    }
+
+    public int calculateMaxSumSellsIndex(long[] purchases) {
         int maxSumSellIndex = 0;
         int sum = 0;
         for (long purchase : purchases) {
             sum += purchase;
         }
-        int avSells = (sum/ purchases.length);
+        int avSells = (sum / purchases.length);
         for (int i = 0; i < purchases.length; i++) {
             if (avSells < purchases[i]) {
                 maxSumSellIndex++;
@@ -67,4 +72,4 @@ public class Statistica {
         }
         return maxSumSellIndex;
     }
-    }
+}

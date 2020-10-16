@@ -24,6 +24,7 @@ class StatisticaTest {
         long actual = service.calculateAverageSells(purchases);
         assertEquals(expected, actual);
     }
+
     @Test
     public void calculateIndexOfMinSells() {
         Statistica service = new Statistica();
@@ -32,6 +33,7 @@ class StatisticaTest {
         long actual = service.calculateIndexOfMinSells(purchases);
         assertEquals(expected, actual);
     }
+
     @Test
     public void calculateIndexOfMaxSells() {
         Statistica service = new Statistica();
@@ -40,6 +42,7 @@ class StatisticaTest {
         long actual = service.calculateIndexOfMaxSells(purchases);
         assertEquals(expected, actual);
     }
+
     @Test
     public void calculateMinSumSellsIndex() {
         Statistica service = new Statistica();
@@ -48,6 +51,7 @@ class StatisticaTest {
         long actual = service.calculateMinSumSellsIndex(purchases);
         assertEquals(expected, actual);
     }
+
     @Test
     public void calculateMaxSumSellsIndex() {
         Statistica service = new Statistica();
